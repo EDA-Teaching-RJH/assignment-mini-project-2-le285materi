@@ -1,0 +1,18 @@
+import re
+import csv
+import os
+from datetime import datetime
+
+class librarybooks: 
+    """This class is used to keep a record of the library's books.
+    It has two modules: "Add books", "Return books". """
+
+    def __init__(self, libraryname):
+        self.libraryname = libraryname
+        self.listofbook = "Listofbooks.txt"
+        self.bookdict = {}
+        self.booksid = 101
+        with open(self.listofbooks) as bk:
+            content = bk.readlines()
+        for line in content:
+            print(libraryname)
