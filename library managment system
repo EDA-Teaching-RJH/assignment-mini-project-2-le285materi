@@ -32,7 +32,7 @@ class librarymanager:
             for book in matchingbooks:
                 print(f"{book}")      
         else:
-            print("No books found containing the word your searched for.")
+            print("No books found containing the word you searched for.")
 
         
         
