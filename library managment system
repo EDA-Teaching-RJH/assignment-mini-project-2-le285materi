@@ -1,18 +1,91 @@
 import re
 import csv
 import os
-from datetime import datetime
 
-class librarybooks: 
+class librarymanager: 
     """This class is used to keep a record of the library's books.
     It has two modules: "Add books", "Return books". """
+    libraryname = ""
+    listofbooks = ""
 
     def __init__(self, libraryname):
         self.libraryname = libraryname
-        self.listofbook = "Listofbooks.txt"
-        self.bookdict = {}
-        self.booksid = 101
-        with open(self.listofbooks) as bk:
-            content = bk.readlines()
-        for line in content:
-            print(libraryname)
+        self.listofbooks = "Listofbooks.txt"
+
+
+    def displaybooks(self):
+        print( "List of books ")
+        print("Title, Author:")
+        bookList = open(self.listofbooks, 'r')
+        print(bookList.read())
+        bookList.close()
+
+    def searchBooks(self):
+        searchword=input("Add the word you would like to search for:")
+        #ask the user to input word to search for
+        with open("Listofbooks.txt", "r") as file:
+         lines= file.txt.readlines()  
+        pattern = re.compile(rf"\n{re.escape(searchword)}\n", re.IGNORECASE)
+        matchingbooks = [line.strip() for line in lines if pattern.search(line)]
+        if matchingbooks:
+            print("\nBooks containing the searched word: ")
+            for book in matchingbooks:
+                print(f"{book}")      
+        else:
+            print("No books found containing the word your searched for.")
+
+        
+        
+        #open the file (read from thhe file)
+        #use regex statements to search through the text file for any time that word comes up
+        #output all of the books that are found
+
+def addbooks (self):
+        books=input("Enter the title of the book:")
+        Author=input("Enter the Authors name:")
+        if books==""or Author=="":
+            print("this is an invalid book name or author name")
+        else:
+            bookfile = open("Listofbooks.txt", "a")
+            bookfile.write(f"{books}, {Author}")
+            print(f"The book '{books}' has been added successfully")  
+            bookfile.close()  
+
+if __name__ == "__main__":
+    try:
+        library = librarymanager("Python's Library") 
+        keylist = {"D": "display books", "A": "Add books", "R": "Return books", "Q": "Quit"} 
+        keypress = input("press enter") 
+        while keypress.lower() != "q":
+            print(f"\nWelcome to {library.libraryname} library management system")
+            for key, value in keylist.items():
+                print(f"Press {key} to {value}")
+            keypress = input("Press key: ").lower()
+            match keypress:
+                case "a":
+                    print("\nCurrent section: Add book\n")
+                    library.addbooks()
+                case "d":
+                    print("\nCurrent section: display books\n")
+                    library.displaybooks()
+                case "q":
+                    print("\nCurrent section: Quitting system\n")
+                    break
+                case _:
+                    print("Option not available. Please try again.")
+    except Exception as e:
+        print("There was an error. Try again.")
+        print(e)
+
+
+
+
+        
+
+
+            
+
+              
+
+
+
