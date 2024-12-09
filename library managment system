@@ -54,7 +54,7 @@ def addbooks (self):
 if __name__ == "__main__":
     try:
         library = librarymanager("Python's Library") 
-        keylist = {"D": "display books", "A": "Add books", "R": "Return books", "Q": "Quit"} 
+        keylist = {"D": "display books", "A": "add books", "R": "return books", "Q": "quit"} 
         keypress = input("press enter") 
         while keypress.lower() != "q":
             print(f"\nWelcome to {library.libraryname} library management system")
