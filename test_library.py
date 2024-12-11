@@ -4,23 +4,23 @@ def main():
       #testing out valid book titles :)
 def testaddbooks():
     try:
-        assert ("BFG".lower())=="bfg".lower()
+        assert ("BFG".lower())=="BFG" #to convert all letters to lower case
     except AssertionError:
         print("Your output is inncorrect. 'Please try again until you get 'BFG'.")
     try:
-        assert ("Shatter me".lower())=="shatter me".lower()
+        assert ("Shatter me".lower())=="Shatter me"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'Shatter me'.")
     try:
-        assert ("The plauge".lower())=="the plague".lower()
+        assert ("The plauge".lower())=="The Plague"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'The plauge'.")
     try:
-        assert ("Wuthering heights".lower())=="wuthering heights".lower()
+        assert ("Wuthering heights".lower())=="Wuthering Heights"
     except AssertionError:
-        print("Your output is inncorrect. Please try again until you get 'Weathering heights'.")
+        print("Your output is inncorrect. Please try again until you get 'Wuthering heights'.")
     try:
-        assert ("Jane Eyre".lower())=="jane eyre".lower()
+        assert ("Jane Eyre".lower())=="Jane Eyre"
     except AssertionError:
      print("Your output is inncorrect. Please try again until you get 'Jane Eyre'.")
      # testing out invalid book tites :(
@@ -43,23 +43,23 @@ def testaddbooks():
 
  #testing out valid author names :(
     try:
-        assert ("Albert Camus".lower())=="albert camus"
+        assert ("Albert Camus".lower())=="Albert Camus"
     except AssertionError:
         print("Your output is inncorrect. 'Please try again until you get 'Albert Camus'.")
     try:
-        assert ("Jane Austen".lower())=="jane austen"
+        assert ("Jane Austen".lower())=="Jane Austen"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'Jane Austen'.")
     try:
-        assert ("Mary Shelley".lower())=="mary shelley".lower()
+        assert ("Mary Shelley".lower())=="Mary Shelley"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get ' Mary Shelley'.")
     try:
-        assert ("Bram Stoker".lower())=="bram stoker".lower()
+        assert ("Bram Stoker".lower())=="Bram Stoker"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'Bram Stoker'.")
     try:
-        assert ("Rebecca F. Kuang")=="rebecca f. kuang".lower()
+        assert ("Rebecca F. Kuang")=="Rebecca F. Kuang"
     except AssertionError:
      print("Your output is inncorrect. Please try again until you get 'Rebecca F. Kuang'.")
 
@@ -83,28 +83,28 @@ def testaddbooks():
  
 def testsearchword():
     try:
-        assert ("Picture".lower())=="picture"
+        assert ("Picture".lower())=="Picture"
     except AssertionError:
         print("Your output is inncorrect. 'Please try again until you get 'Picture'.")
     try:
-        assert ("Life".lower())=="life".lower()
+        assert ("Life".lower())=="Life"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'Life'.")
     try:
-        assert ("Brother".lower())=="brother".lower()
+        assert ("Brother".lower())=="Brother"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'Brother'.")
     try:
-        assert ("Heights".lower())=="heights".lower()
+        assert ("Heights".lower())=="Heights"
     except AssertionError:
         print("Your output is inncorrect. Please try again until you get 'heights'.")
     try:
-        assert ("Count".lower())=="count".lower()
+        assert ("Count".lower())=="Count"
     except AssertionError:
      print("Your output is inncorrect. Please try again until you get 'Count'.")
      # testing out invalid book tites :(
     try:
-        assert  ("Lidl")=="Your input is incorrect. Please try again"
+        assert ("Lidl")=="Your input is incorrect. Please try again"
     except AssertionError:
         print("Your output is inncorrect.")
     try:
